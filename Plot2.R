@@ -11,9 +11,10 @@ plotData <- read.table(datafile, header=TRUE, sep=";", na.strings="?")
 subSetplotData <- plotData[plotData$Date %in% c("1/2/2007", "2/2/2007"),]
 
 ## Plot 2
-# open device
+# setup strings
 DateTime <- strptime(paste(subSetplotData$Date, subSetplotData$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 GlobalActivePower <- as.numeric(subSetplotData$Global_active_power)
+# open device
 if(!file.exists('figures')) dir.create('figures')
 png(filename = './figures/Plot2.png', width=480, height=480, units='px')
 # plot figure 2
