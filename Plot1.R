@@ -13,7 +13,7 @@ subSetplotData <- plotData[plotData$Date %in% c("1/2/2007", "2/2/2007"),]
 ## Plot 1
 # open device
 if(!file.exists('figures')) dir.create('figures')
-png(filename = './figures/plot1.png', width=480, height=480, units='px')
+png(filename = './figures/Plot1.png', width=480, height=480, units='px')
 # plot figure 1
 with(subSetplotData,hist(Global_active_power, xlab='Global Active Power (kilowatts)', main='Global Active Power', col='red'))
 # close device
