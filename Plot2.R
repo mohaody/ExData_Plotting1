@@ -18,4 +18,5 @@ if(!file.exists('figures')) dir.create('figures')
 png(filename = './figures/Plot2.png', width=480, height=480, units='px')
 # plot figure 2
 plot(DateTime, GlobalActivePower, xlab='', ylab='Global Active Power (kilowatts)', type='l')
+# close device
 dev.off()
